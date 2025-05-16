@@ -2,7 +2,7 @@
 
 function analyzeText(str){
     const st = document.getElementById("text").value
-    const substring = document.getElementById("substring").value;
+    const substring = document.getElementById("substring").value.toLowerCase();
     console.log(st);
     console.log(substring);
 
@@ -14,19 +14,23 @@ function analyzeText(str){
     const charCount = st.length;
     const charCountWithoutSpaces = st.replace(/\s/g, "").length;
 
+
     // Sentence count
     const sentences = st.split(/[.?]/);
     const sentenceCount = sentences.length - 1;
 
+    console.log(sentences);
+
     // Occurrences of "substring"
     
-    const substringCount = st.split(substring).length - 1;
+    const sub = st.toLowerCase();
+    const substringCount = sub.split(substring).length - 1;
 
-    console.log("Word count:",wordCount);
-    console.log("Character count:",charCount);
-    console.log("Character count without spaces:",charCountWithoutSpaces);
-    console.log("Sentence count:",sentenceCount);
-    console.log(`Occurrences of ${substring}:`, substringCount);
+    // console.log("Word count:",wordCount);
+    // console.log("Character count:",charCount);
+    // console.log("Character count without spaces:",charCountWithoutSpaces);
+    // console.log("Sentence count:",sentenceCount);
+    // console.log(`Occurrences of ${substring}:`, substringCount);
 
 
     document.getElementById("wordCount").textContent = wordCount;
