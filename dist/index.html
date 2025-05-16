@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Text Analyzer</title>
+  <link rel="stylesheet" crossorigin href="/assets/index-Cvdjs8cT.css">
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+  <div class="bg-white shadow-lg rounded-xl p-6 max-w-xl w-full">
+    <h1 class="text-center text-3xl font-bold mb-6 underline text-sky-600">
+      Day 7: Text Analyzer
+    </h1>
+
+    <div class="flex flex-col gap-4">
+      <input
+        type="text"
+        id="text"
+        placeholder="Enter text here"
+        class="border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-400"
+      />
+      <input
+        type="text"
+        id="substring"
+        placeholder="Enter substring here"
+        class="border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-400"
+      />
+      <button
+        onclick="analyzeText()"
+        class="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md transition"
+      >
+        Analyze Text
+      </button>
+    </div>
+
+    <div class="mt-6 space-y-2 text-gray-700">
+      <p>Word Count: <span id="wordCount" class="font-semibold text-black"></span></p>
+      <p>Character Count (including spaces): <span id="charCount" class="font-semibold text-black"></span></p>
+      <p>Character Count (without spaces): <span id="charCounts" class="font-semibold text-black"></span></p>
+      <p>Sentence Count: <span id="sentenceCount" class="font-semibold text-black"></span></p>
+      <p id="substringName">
+        Occurrences of Substring: <span id="" class="font-semibold text-black"></span>
+      </p>
+    </div>
+  </div>
+
+  <script src="textAnalyzer.js"></script>
+</body>
+</html>
